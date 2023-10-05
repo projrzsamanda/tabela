@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>tabela 1</title>
+
+<!------------ESTILO-------------->
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif; /*tipo da fonte*/
+    }
+    table {
+        width: 500px; /*largura da tabela*/
+        border-collapse: collapse;/*elimina espaço entre as células*/
+    }
+    td, th {
+        border: 1px solid black;/*espessura e estilo da borda das células*/
+        padding: 10px; /*distância entre o conteúdo e as bordas*/
+    }
+    caption {
+        font-size: 22px; /*tamanho da fonte do título da tabela*/
+        font-weight: bold; /*peso ou intensidade da fonte*/
+        padding: 10px; /*dintância entre o conteúdo e as bordas*/
+        background-color: lightgray; /*cor do fundo do título da tabela*/ 
+    }    
+     thead, tfoot {
+        background-color: #383838; /*cor do fundo do cabeçalho e rodapé da tabela */
+        color: white; /*cor da fonte*/
+    }   
+    tbody > tr: :nth-child(odd) { /*linhas ímpares*/
+        background-color: white; /*cor de fundo da linha*/
+    }    
+    td.num {
+        text-align: right; /*alinhamneto do texto da class "num"*/    
+    }
+</style>
+<!------------------------------>
+</head>
+
+<body>
+    <h1>estrutura de tabelas grandes</h1>
+<!--
+    ANATOMIA PARA TABELAS GRANDES 
+    TABLE 
+        CAPTION
+
+        THEAD 
+            TH (table row,) TD (tabel data), TH (table head)
+        TBODY 
+             TH (table row,) TD (tabel data), TH (table head)
+        TFOOD
+            TH (table row,) TD (tabel data), TH (table head) 
+--> 
+<table>
+    <caption>população dos estados</caption>
+   
+    <thead>
+        <tr>
+            <th colspan="2"> SUDESTE</th>
+        </tr>
+        <tr>
+            <th>estado</th>
+            <th style="width: 50px;">quantidade</th>
+        </tr>
+
+    </thead>
+    <tbody>
+        <tr> 
+            <td>são paulo</td>
+            <td class="num">44 milhões</td>
+        </tr>
+        <tr>
+          <td>minas gerais</td>
+          <td class="num">20 milhões</td>  
+        </tr>
+        <tr>
+            <td>rio de janeiro</td>
+            <td class="num">16 milhões</td>
+        </tr>
+        <tr>
+            <td>espirito santo</td>
+            <td class="num">4 milhões</td>
+            </tr>
+    </tbody>
+
+    <tfoot>
+        <tr>
+            <th>total de habitantes</th>
+            <td class="num"><strong>84 milhões</strong></td>
+        </tr>
+    </tfoot>
+</body>
+</html>
